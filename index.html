@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container my-4">
+        <h1 class="my-4 text-center"> Hello , let's communicate</h1>
+
+        <div class="chatRoom mb-3 text-center">
+            <div class="my-2">Choose a chatroom </div>
+            <button class="btn" id="general">#general</button>
+            <button class="btn" id="sport">#sport</button>
+            <button class="btn" id="gaming">#gaming</button>
+        </div> <!-- rooms end  -->
+
+        <div class="chat-window">
+            <ul class="chat-list list-group"></ul>
+        </div> <!-- user messages  -->
+
+        <form class="new-chat-room my-3">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">Your text</div>
+                </div>
+                <input type="text" id="message" class="form-control" required>
+                <div class="input-group-append">
+                    <input type="submit" class="btn" value="send">
+
+                </div>
+            </div>
+        </form> <!-- user messages  -->
+
+        <form class="new-name my-3">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">update name</div>
+                </div>
+                <input type="text" id="name" class="form-control" required>
+                <div class="input-group-append">
+                    <input type="submit" class="btn" value="update">
+                </div>
+            </div>
+            <div class="update-msg"></div>
+        </form>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/date-fns/1.9.0/date_fns.min.js" integrity="sha512-ToehgZGJmTS39fU8sfP9/f0h2Zo6OeXXKgpdEgzqUtPfE5By1K/ZkD8Jtp5PlfdaWfGVx+Jw5j10h63wSwM1HA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyB6SM37WCo1wREwWs9_h2KxMdGTF9nP_Kw",
+            authDomain: "chat-2bec9.firebaseapp.com",
+            projectId: "chat-2bec9",
+            storageBucket: "chat-2bec9.appspot.com",
+            messagingSenderId: "186191342132",
+            appId: "1:186191342132:web:dbb54cb153a3ee66907861",
+            measurementId: "G-P7BSJ33T1Y"
+        };
+        // Initialize Firebase
+        const app = firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+    </script>
+    <script  src="js/chat.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>

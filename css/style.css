@@ -1,0 +1,30 @@
+
+.container{
+    max-width: 600px;
+}
+.btn{
+    background: cornflowerblue;
+    color: white;
+    outline: none !important;
+    box-shadow: none !important;
+
+}
+
+.btn:focus{
+    outline: none  !important;
+}
+
+.username{
+    font-weight: bold;
+    font-style: italic;
+    margin-bottom: 5px;
+}
+.time{
+    
+    font-size: smaller;
+
+}
+.update-msg{
+    text-align: center;
+    margin: 20px auto;
+}
